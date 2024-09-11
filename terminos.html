@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siéntete fit</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="styleTerminos.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceMenuItem = document.querySelector('.header-menu li.servicios > a');
+    const submenu = document.querySelector('.header-menu li.servicios .submenu');
+    
+    serviceMenuItem.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene la navegación predeterminada
+
+        // Alterna la visibilidad del submenú
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null; // Cierra el submenú
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px"; // Abre el submenú
+        }
+    });
+});
+
+</script>
+
+<body class="body-fixed">
+    <!-- start of header  -->
+    <header class="site-header" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" class="logo-img" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="main-navigation">
+                        <button class="menu-toggle"><span></span><span></span></button>
+                        <nav class="header-menu">
+                            <ul class="menu food-nav-menu">
+                                <li class="underline-hover" style="box-shadow: none;"><a href="index.html">Home</a></li>
+                                <li class="underline-hover"><a href="especialistas.html">Especialistas</a></li>
+                                <li class="servicios">
+                                    <a href="javascript:void(0);">Servicios</a>
+                                    <ul class="submenu">
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-nutricional" style="width:121PX">Consultoría nutricional</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-psicologia" style="width:121PX">Consejería psicológica</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-Entrenamiento" style="width:141PX">Entrenamiento personalizado</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-coorporativo" style="width:121PX">Corporativos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="underline-hover"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends  -->
+
+<!-- Sección Juan Carlos Alvarez Cano Fernandez -->
+<!-- Sección Juan Carlos Alvarez Cano Fernandez -->
+
+<section class="terms-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; padding: 40px; background-color: #f8f9fa;">
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 30px;margin-top: 52px;font-weight: bold;">Términos y Condiciones</h2>
+        
+        <h4><i class="fas fa-stethoscope" style="color: #7CA3A3;"></i>Consultas Nutricionales y Psicológicas:</h4>
+        <ol>
+            <li><strong><i class="fas fa-undo-alt" style="color: #7CA3A3;"></i> Devoluciones:</strong> No se realizan devoluciones una vez efectuado el pago.</li>
+            <li><strong><i class="fas fa-clock" style="color: #7CA3A3;"></i> Duración de las consultas:</strong> Las consultas nutricionales y psicológicas tienen una duración aproximada de 50 minutos.</li>
+            <li><strong><i class="fas fa-hourglass-half" style="color: #7CA3A3;"></i> Tiempo de Espera:</strong> El tiempo máximo de espera es de 10 minutos para sesiones presenciales y virtuales. Si no te presentas a tiempo, la cita se considerará perdida sin derecho a reclamos.</li>
+            <li><strong><i class="fas fa-calendar-alt" style="color: #7CA3A3;"></i> Reprogramación de citas:</strong> Para modificar el horario o día de tu cita, debes solicitarlo con al menos 48 horas de antelación y ajustarte a la disponibilidad de citas. Solo se permite reprogramar una cita por mes.</li>
+            <li><strong><i class="fas fa-clipboard-list" style="color: #7CA3A3;"></i> Plan Nutricional de 2 Meses:</strong> La segunda consulta se realizará aproximadamente un mes después de la primera.</li>
+            <li><strong><i class="fas fa-file-alt" style="color: #7CA3A3;"></i> Entrega de Planes e Informes:</strong> El plan de alimentación o informe psicológico se entregará dentro de un plazo de 48 horas después de la cita.</li>
+            <li><strong><i class="fas fa-calendar-times" style="color: #7CA3A3;"></i> Disponibilidad de Atención:</strong> Los nutricionistas y psicólogos no están obligados a responder los domingos ni en días feriados.</li>
+            <li><strong><i class="fas fa-times-circle" style="color: #7CA3A3;"></i> Desinterés en el Servicio:</strong> Si un paciente no responde durante un período de 2 semanas, se considerará que ha mostrado desinterés en continuar con el servicio.</li>
+        </ol>
+
+        <h4><i class="fas fa-dumbbell" style="color: #7CA3A3;"></i>Entrenamientos Presenciales y Virtuales:</h4>
+        <ol>
+            <li><strong><i class="fas fa-undo-alt" style="color: #7CA3A3;"></i> Devoluciones:</strong> No se realizan devoluciones una vez efectuado el pago.</li>
+            <li><strong><i class="fas fa-clock" style="color: #7CA3A3;"></i> Duración de los Entrenamientos:</strong> Los entrenamientos presenciales y virtuales tienen una duración aproximada de 1 hora.</li>
+            <li><strong><i class="fas fa-hourglass-half" style="color: #7CA3A3;"></i> Tiempo de Espera:</strong> El tiempo máximo de espera es de 10 minutos para sesiones presenciales y virtuales premium.</li>
+            <li><strong><i class="fas fa-calendar-alt" style="color: #7CA3A3;"></i> Reprogramación de Sesiones:</strong> Para modificar el horario o día de tu sesión, debes solicitarlo con al menos 48 horas de antelación y ajustarte a la disponibilidad del entrenador.</li>
+            <li><strong><i class="fas fa-comments" style="color: #7CA3A3;"></i> Sesiones de Feedback:</strong> Las sesiones de feedback virtual básico tienen una duración aproximada de 20 minutos y se realizan los fines de semana.</li>
+            <li><strong><i class="fas fa-times-circle" style="color: #7CA3A3;"></i> Desinterés en el Servicio:</strong> Si un paciente no responde durante un período de 2 semanas, se considerará que ha mostrado desinterés en continuar con el servicio.</li>
+        </ol>
+
+        <h4><i class="fas fa-child" style="color: #7CA3A3;"></i>Atención de Menores de Edad:</h4>
+        <p>La atención a menores de edad debe realizarse con el consentimiento previo y por escrito de sus padres o tutores legales.</p>
+
+        <h4><i class="fas fa-envelope" style="color: #7CA3A3;"></i>Uso de Datos de Contacto:</h4>
+        <p>Al aceptar estos términos y condiciones, usted autoriza a Siéntete Fit a utilizar su número de celular y correo electrónico para promociones y actualizaciones.</p>
+
+        <h4><i class="fas fa-camera" style="color: #7CA3A3;"></i>Uso de Imágenes y Videos:</h4>
+        <p>Al aceptar estos términos y condiciones, usted consiente que Siéntete Fit utilice fotos y videos en los que aparezca para fines publicitarios.</p>
+    </div>
+</section>
+
+
+
+   <!-- Incluir el script de AOS -->
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+   <script>
+       AOS.init();
+   </script>
+
+
+
+
+
+</section>
+         <!-- footer starts  -->
+         <footer class="site-footer" id="contact">
+            <div class="top-footer section" style="padding-top: 0px;padding-bottom: 0px;">
+                <div class="sec-wp" style="background-color:#96A57A ;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="footer-info">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="logo.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, tenetur.</p> -->
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li>
+                                    
+                                                <a href="https://wa.me/51908500961" target="_blank">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://instagram.com/sientetefit" target="_blank">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.tiktok.com/@sintete.fit?_t=8pduIPmuxQk&_r=1"target="_blank">
+                                                    <i class="fab fa-tiktok"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="footer-flex-box">
+                                    <div class="footer-table-info">
+                                        <h3 class="h3-title">Horarios</h3>
+                                        <ul style="list-style: none; padding: 0;">
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Lunes - Viernes:</strong> 8:00 AM - 8:00 PM</li>
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Sábado:</strong> 8:00 AM - 6:00 PM</li>
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Domingo:</strong> 9:00 AM - 2:00 PM</li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu food-nav-menu">
+                                        <h3 class="h3-title">Páginas</h3>
+                                        <ul class="column-2">
+                                            <li>
+                                                <a href="#home" class="footer-active-menu">
+                                                    <i class="uil uil-home"></i> Home
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="especialistas.html">
+                                                    <i class="uil uil-user-md"></i> Especialistas
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="servicios.html">
+                                                    <i class="uil uil-user-md"></i> Servicios
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contacto.html">
+                                                    <i class="uil uil-envelope"></i> Contacto
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <h3 class="h3-title">Información</h3>
+                                        <ul>
+                                            <li><a href="terminos.html"><i class="uil uil-file-alt"></i> Términos</a></li>
+                                            <li><a href="https://maps.app.goo.gl/sPwTqMBsYKbBnfCe9" target="_blank"><i class="uil uil-map-marker"></i> Av. Brasil 2730, Pueblo Libre, Lima - Perú</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends -->
+
+        </div>
+    </div>
+
+
+
+    <a href="https://wa.me/51908500961" class="whatsapp-float" target="_blank">
+        <i class="uil uil-whatsapp"></i>
+    </a>
+    
+
+
+
+    <!-- jquery  -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!-- fontawesome  -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- swiper slider  -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- mixitup -- filter  -->
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+
+    <!-- fancy box  -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- parallax  -->
+    <script src="assets/js/parallax.min.js"></script>
+
+    <!-- gsap  -->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!-- scroll trigger  -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- scroll to plugin  -->
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <!-- rellax  -->
+    <!-- <script src="assets/js/rellax.min.js"></script> -->
+    <!-- <script src="assets/js/rellax-custom.js"></script> -->
+    <!-- smooth scroll  -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    <!-- custom js  -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

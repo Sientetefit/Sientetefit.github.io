@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siéntete fit</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="styleEspecialistas.css">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceMenuItem = document.querySelector('.header-menu li.servicios > a');
+    const submenu = document.querySelector('.header-menu li.servicios .submenu');
+    
+    serviceMenuItem.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene la navegación predeterminada
+
+        // Alterna la visibilidad del submenú
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null; // Cierra el submenú
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px"; // Abre el submenú
+        }
+    });
+});
+
+</script>
+
+<body class="body-fixed">
+    <header class="site-header" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" class="logo-img" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="main-navigation">
+                        <button class="menu-toggle"><span></span><span></span></button>
+                        <nav class="header-menu">
+                            <ul class="menu food-nav-menu">
+                                <li class="underline-hover" style="box-shadow: none;"><a href="index.html">Home</a></li>
+                                <li class="underline-hover"><a href="especialistas.html">Especialistas</a></li>
+                                <li class="servicios">
+                                    <a href="javascript:void(0);">Servicios</a>
+                                    <ul class="submenu">
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-nutricional" style="width:121PX">Consultoría nutricional</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-psicologia" style="width:121PX">Consejería psicológica</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-Entrenamiento" style="width:141PX">Entrenamiento personalizado</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-coorporativo" style="width:121PX">Corporativos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="underline-hover"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header ends  -->
+
+ 
+       
+           <!-- Sección Brigitte Calero -->
+<section class="specialist-section" data-aos="fade-right" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;margin-top: 10px;">
+                <h1>¡Hola, soy Brigitte Calero!</h1>
+                <h3>Nutricionista deportiva - estética - Nutrición hormonal <br> CNP 9327</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Licenciada en Nutrición y Dietética, con más de 7 años de experiencia transformando la vida de mis pacientes a través de un enfoque personalizado y basado en evidencia científica. Mi especialización en nutrición deportiva, estética, y nutrición hormonal en la mujer me permite ofrecer soluciones efectivas tanto para la pérdida de peso como para el aumento de masa muscular.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    A lo largo de mi carrera, he trabajado con pacientes hombres y mujeres, logrando cambios físicos notables y mejoras en su rendimiento. Además, he apoyado a muchas mujeres a mejorar su salud hormonal, equilibrando su bienestar interno con los objetivos estéticos. Mi enfoque integral asegura resultados sostenibles que impactan positivamente en la salud y la apariencia de mis pacientes.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    ¿Te animas a empezar tu cambio?
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-6 image-section">
+                <img src="assets/images/especialistas/Brighitte.png" alt="Brigitte Calero" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Sección Juan Carlos Alvarez Cano Fernandez -->
+<section class="specialist-section" data-aos="fade-left" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2 image-section">
+                <img src="assets/images/especialistas/Juan_Carlos.png" alt="Juan Carlos" class="img-fluid">
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Juan Carlos Alvarez Cano!</h1>
+                <h3>Nutricionista clínico - geriátrico<br> CNP 9062</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Nutricionista especializado en nutrición clínica, con una sólida formación en el tratamiento nutricional de diversas enfermedades. 
+                </p>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Mi formación incluye una especialización y diplomado en nutrición clínica, complementada con varios cursos adicionales que, junto a mis 7 años de experiencia, me capacitan para diseñar planes de alimentación efectivos para la prevención y el tratamiento de enfermedades.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Actualmente, brindo atención a pacientes con diversas enfermedades, siendo algunas de ellas diabetes mellitus, resistencia a la insulina y enfermedades gastrointestinales, así como a adultos mayores. Estoy firmemente convencido del poder de la nutrición basada en evidencia científica para prevenir y tratar enfermedades.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sección Micaela Illescas -->
+<section class="specialist-section" data-aos="fade-right" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Micaela Illescas!</h1>
+                <h3>Nutricionista vegana/ vegetariana - Nutrición deportiva especialista en runner <br> CNP 9184</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Licenciada en Nutrición y Dietética por la Universidad Científica del Sur. Me especializo en nutrición basada en plantas, alimentación vegetariana y vegana, y nutrición deportiva, respaldada por varios cursos en estas áreas.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Mi experiencia en consultoría privada incluye el trabajo con corredores que buscan optimizar su rendimiento y con pacientes vegetarianos y veganos, ayudándoles a mantener una dieta equilibrada y satisfacer sus necesidades nutricionales.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    ¿Te animas a empezar tu cambio?
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-6 image-section">
+                <img src="assets/images/especialistas/Micaela.png" alt="Micaela Illescas" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sección Rosa Ccapa -->
+<section class="specialist-section" data-aos="fade-left" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2 image-section">
+                <img src="assets/images/especialistas/Rosa.png" alt="Rosa Ccapa" class="img-fluid">
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Rosa Ccapa!</h1>
+                <h3>Nutricionista materno infantil <br> CNP 7831</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Licenciada en Nutrición Humana por la Universidad Nacional Mayor de San Marcos, con una Maestría en Gestión de los Servicios de Alimentación. Tengo una especialización en Nutrición Pediátrica y certificaciones internacionales en Nutrición Clínica Pediátrica, Alimentación Complementaria y Baby-Led Weaning.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Además de mi experiencia en docencia universitaria en Nutrición Materno Infantil, me dedico a asegurar que tu hijo tenga una alimentación saludable y una relación positiva con los alimentos. Trabajemos juntos para establecer hábitos alimentarios que promuevan un crecimiento óptimo.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Lisset Urbano -->
+<section class="specialist-section" data-aos="fade-right" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Lisset Urbano!</h1>
+                <h3>Psicóloga clínica infantil <br></h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Licenciada en Psicología Clínica e Infantil, con más de diez años de experiencia en los campos clínico y educativo. Mi formación y trayectoria me han permitido desarrollar una especialización en el tratamiento de dificultades emocionales y conductuales, trastornos del neurodesarrollo y trastornos ansiosos-depresivos.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    En mi práctica, me enfoco en ofrecer un apoyo integral que va más allá de la simple intervención clínica. Mi objetivo es ayudarte a superar retos emocionales y conductuales con un enfoque personalizado, brindándote herramientas y estrategias adaptadas a tus necesidades individuales.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-6 image-section">
+                <img src="assets/images/especialistas/Lisset.png" alt="Lisset Urbano" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Sección Stefani Jara -->
+<section class="specialist-section" data-aos="fade-left" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2 image-section">
+                <img src="assets/images/especialistas/Stefani.png" alt="Stefani Jara" class="img-fluid">
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Stefani Jara!</h1>
+                <h3>Psicóloga clínica - cognitivo conductual <br> C.Ps.P 43473</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Licenciada en Psicología. He complementado mi formación con cursos especializados en psicología clínica y organizacional, así como en Terapia Cognitivo-Conductual y Terapia de Esquemas.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Actualmente, me dedico a apoyar a personas que buscan prevenir y mejorar su bienestar psicológico. Ofrezco orientación, terapia y psicoterapia para abordar una variedad de problemas psicológicos, adaptando mi enfoque a las necesidades individuales de cada paciente.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Gianpierre Parraga Fernandez -->
+<section class="specialist-section" data-aos="fade-right" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Gianpierre Parraga!</h1>
+                <h3>Entrenador personal</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Entrenador personal certificado por la International Federation of Bodybuilding and Fitness. Mi pasión es promover un estilo de vida saludable en todas las edades, desde niños hasta adultos mayores.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Especializado en entrenamiento funcional, ganancia de masa muscular, desarrollo de fuerza y reducción de grasa, me enfoco en optimizar la fuerza y la composición corporal. Estoy aquí para mejorar tus capacidades físicas con una evaluación y programación personalizada, ayudándote a disfrutar y beneficiarte del entrenamiento.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+            <div class="col-lg-6 image-section">
+                <img src="assets/images/especialistas/Gianpierre.png" alt="Gianpierre Parraga" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección Franco Ibañez -->
+<section class="specialist-section" data-aos="fade-left" data-aos-duration="1500">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-1 order-2 image-section">
+                <img src="assets/images/especialistas/Franco.png" alt="Franco Ibañez" class="img-fluid">
+            </div>
+            <div class="col-lg-6 order-lg-2 order-1 text-section" style="font-family: 'Montserrat', sans-serif; font-weight: 400; margin-left:0px;">
+                <h1>¡Hola, soy Franco Ibañez!</h1>
+                <h3>Entrenador personal</h3>
+                <p style="text-align: justify; margin-left:0px;"> 
+                    Entrenador personal certificado con formación en biomecánica y entrenamiento para el adulto mayor. Me especializo en mejorar la composición corporal, reduciendo grasa y aumentando masa muscular.
+                </p>
+                <p style="text-align: justify; margin-left:0px;">
+                    Utilizo principios científicos para diseñar planes personalizados que optimicen tu progreso, considerando tus debilidades, objetivos y recursos. Con tu compromiso y mi apoyo, lograremos los resultados que buscas.
+                </p>
+                <div class="banner-btn mt-4">
+                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+   <!-- Incluir el script de AOS -->
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+   <script>
+       AOS.init();
+   </script>
+
+
+
+
+
+         <!-- footer starts  -->
+         <footer class="site-footer" id="contact">
+            <div class="top-footer section" style="padding-top: 0px;padding-bottom: 0px;">
+                <div class="sec-wp" style="background-color:#96A57A ;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="footer-info">
+                                    <div class="footer-logo">
+                                        <a href="index.html">
+                                            <img src="logo.png" alt="">
+                                        </a>
+                                    </div>
+                                    <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, tenetur.</p> -->
+                                    <div class="social-icon">
+                                        <ul>
+                                            <li>
+                                    
+                                                <a href="https://wa.me/51908500961" target="_blank">
+                                                    <i class="fab fa-whatsapp"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://instagram.com/sientetefit" target="_blank">
+                                                    <i class="fab fa-instagram"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.tiktok.com/@sintete.fit?_t=8pduIPmuxQk&_r=1"target="_blank">
+                                                    <i class="fab fa-tiktok"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="footer-flex-box">
+                                    <div class="footer-table-info">
+                                        <h3 class="h3-title">Horarios</h3>
+                                        <ul style="list-style: none; padding: 0;">
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Lunes - Viernes:</strong> 8:00 AM - 8:00 PM</li>
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Sábado:</strong> 8:00 AM - 6:00 PM</li>
+                                            <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Domingo:</strong> 9:00 AM - 2:00 PM</li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu food-nav-menu">
+                                        <h3 class="h3-title">Páginas</h3>
+                                        <ul class="column-2">
+                                            <li>
+                                                <a href="#home" class="footer-active-menu">
+                                                    <i class="uil uil-home"></i> Home
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="especialistas.html">
+                                                    <i class="uil uil-user-md"></i> Especialistas
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="servicios.html">
+                                                    <i class="uil uil-user-md"></i> Servicios
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contacto.html">
+                                                    <i class="uil uil-envelope"></i> Contacto
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="footer-menu">
+                                        <h3 class="h3-title">Información</h3>
+                                        <ul>
+                                            <li><a href="terminos.html"><i class="uil uil-file-alt"></i> Términos</a></li>
+                                            <li><a href="https://maps.app.goo.gl/sPwTqMBsYKbBnfCe9" target="_blank"><i class="uil uil-map-marker"></i> Av. Brasil 2730, Pueblo Libre, Lima - Perú</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends -->
+
+
+        <a href="https://wa.me/51908500961" class="whatsapp-float" target="_blank">
+            <i class="uil uil-whatsapp"></i>
+        </a>
+        
+    
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jquery  -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!-- fontawesome  -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- swiper slider  -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- mixitup -- filter  -->
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+
+    <!-- fancy box  -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- parallax  -->
+    <script src="assets/js/parallax.min.js"></script>
+
+    <!-- gsap  -->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!-- scroll trigger  -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- scroll to plugin  -->
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <!-- rellax  -->
+    <!-- <script src="assets/js/rellax.min.js"></script> -->
+    <!-- <script src="assets/js/rellax-custom.js"></script> -->
+    <!-- smooth scroll  -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    <!-- custom js  -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

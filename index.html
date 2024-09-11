@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siéntete fit</title>
+    <!-- for icons  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider  -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- fancy box  -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="styleHome.css">
+</head>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".section-to-animate");
+
+    // Función que verifica si el elemento está en el viewport
+    function checkVisibility() {
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            // Si la sección está visible, añadimos la clase "section-visible"
+            if (rect.top <= windowHeight - 100) { // Ajustar el valor "100" si es necesario
+                section.classList.add("section-visible");
+            }
+        });
+    }
+
+    // Llamamos a la función en scroll y en la carga de la página
+    window.addEventListener("scroll", checkVisibility);
+    window.addEventListener("load", checkVisibility);
+});
+
+
+document.querySelectorAll('.header-menu li > a').forEach(function(menuItem) {
+    menuItem.addEventListener('click', function(e) {
+        const submenu = this.nextElementSibling;
+        if (submenu && submenu.classList.contains('submenu')) {
+            e.preventDefault();
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+    });
+
+    // Mantiene el submenú abierto mientras el mouse está sobre él
+    menuItem.parentElement.addEventListener('mouseleave', function() {
+        const submenu = this.querySelector('.submenu');
+        if (submenu) {
+            submenu.style.display = 'none';
+        }
+    });
+
+    menuItem.parentElement.addEventListener('mouseenter', function() {
+        const submenu = this.querySelector('.submenu');
+        if (submenu) {
+            submenu.style.display = 'block';
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    const servicios = document.querySelector(".header-menu li.servicios");
+    const submenu = servicios.querySelector(".submenu");
+
+    servicios.addEventListener("click", function(event) {
+        event.preventDefault();
+        const isDisplayed = window.getComputedStyle(submenu).display === "block";
+        submenu.style.display = isDisplayed ? "none" : "block";
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!servicios.contains(event.target) && submenu.style.display === "block") {
+            submenu.style.display = "none";
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceMenuItem = document.querySelector('.header-menu li.servicios > a');
+    const submenu = document.querySelector('.header-menu li.servicios .submenu');
+    
+    serviceMenuItem.addEventListener('click', function(e) {
+        e.preventDefault(); // Previene la navegación predeterminada
+
+        // Alterna la visibilidad del submenú
+        if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null; // Cierra el submenú
+        } else {
+            submenu.style.maxHeight = submenu.scrollHeight + "px"; // Abre el submenú
+        }
+    });
+});
+
+});
+</script>
+<link rel="icon" href="ico.png" type="image/png">
+
+<body class="body-fixed">
+    <!-- start of header  -->
+    <header class="site-header" style="background-color: white;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="logo.png" class="logo-img" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="main-navigation">
+                        <button class="menu-toggle"><span></span><span></span></button>
+                        <nav class="header-menu">
+                            <ul class="menu food-nav-menu">
+                                <li class="underline-hover" style="box-shadow: none;"><a href="index.html">Home</a></li>
+                                <li class="underline-hover"><a href="especialistas.html">Especialistas</a></li>
+                                <li class="servicios">
+                                    <a href="javascript:void(0);">Servicios</a>
+                                    <ul class="submenu">
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-nutricional" style="width:121PX">Consultoría nutricional</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-psicologia" style="width:121PX">Consejería psicológica</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-Entrenamiento" style="width:141PX">Entrenamiento personalizado</a></li>
+                                        <li class="underline-hover"><a href="servicios.html#consultoria-coorporativo" style="width:121PX">Corporativos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="underline-hover"><a href="contacto.html">Contacto</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    <!-- header ends  -->
+
+    <div id="viewport">
+        <div id="js-scroll-content">
+    
+            <section class="fit-banner section-to-animate section-from-left" id="fit-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-text custom-banner-text">
+                                <h1 style="text-align: center; font-weight: bold; color: #FFFFFF;">
+                                    <span>En<span style="color: #96A57A;"> Siéntete Fit</span> estamos comprometidos con tu bienestar integral</span>
+                                </h1>
+                                
+                                <div class="banner-btn mt-4">
+                                    <a href="https://wa.me/51908500961" target="_blank" class="sec-btn">Contáctanos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+
+            <section class="services-section section-to-animate section-from-right" style="font-family: 'Montserrat', sans-serif;">
+                <div class="container-fluid"> <!-- Cambié a container-fluid para eliminar el margen lateral -->
+                    <div class="row no-gutters align-items-center"> <!-- Agregué no-gutters para eliminar espacios entre columnas -->
+                        <div class="col-lg-6 text-left"> <!-- Cambié a text-left para asegurar que el contenido esté alineado a la izquierda -->
+                            <img src="assets/images/Foto grupal1.jpg" alt="Siéntete Fit" class="image-left-aligned">
+                            <!-- <div class="banner-btn mt-4 d-lg-none">
+                                <a href="#menu" class="sec-btn">Contáctanos</a>
+                            </div> -->
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-left position-relative">
+                            <div class="background-image"></div>
+                            <h3 class="services-title" style="font-weight: bold;">Tu Bienestar, Nuestra Misión</h3>
+                            <p class="service-description">Nuestra misión es mejorar tu bienestar integral mediante un enfoque multidisciplinario que combina nutrición, psicología y entrenamiento. Nos dedicamos a apoyarte en cada paso para que alcances tus objetivos, ya sea mejorar tu rendimiento, tratar enfermedades, alcanzar metas estéticas o cuidar tu salud mental.</p>
+                            <p class="service-description">Ofrecemos soluciones personalizadas y basadas en evidencia científica tanto para personas que buscan transformar su vida como para empresas que desean mejorar la salud y productividad de sus empleados.</p>
+                            <p class="service-description">Contáctanos hoy para comenzar tu transformación o impulsar el bienestar de tu equipo con nuestro apoyo integral.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+         
+            
+<!-- Sección de Beneficios para tu Empresa -->
+<section class="beneficios-empresa section-to-animate section-from-left" style="padding: 50px 15px; background-color: #F8F7F5;">
+    <div class="container">
+        <h2 style="font-weight: 1000; text-align: left; margin-bottom: 40px;">¿Por qué elegir nuestro servicios?</h2>
+
+        <div class="row">
+            <!-- Beneficios Listado en Bloques -->
+            <div class="col-lg-6">
+                <div class="row">
+                    <!-- Bloque 1 -->
+                    <div class="col-md-6">
+                        <div class="beneficio-box" style="background-color: #fff; color: #333; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+                            <i class="fas fa-user-cog" style="vertical-align: middle; margin-right: 8px;"></i>
+                            <strong>Personalización Total</strong>
+                            <p style="text-align: justify;">Cada plan que diseñamos está hecho a medida, considerando tus metas, estilo de vida y necesidades individuales o corporativas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 2 -->
+                    <div class="col-md-6">
+                        <div class="beneficio-box" style="background-color: #fff; color: #333; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+                            <i class="fas fa-users" style="vertical-align: middle; margin-right: 8px;"></i>
+                            <strong>Soporte Multidisciplinario</strong>
+                            <p style="text-align: justify;">Con el respaldo de nutricionistas, psicólogos y entrenadores, te ofrecemos un cuidado completo y coordinado.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 3 -->
+                    <div class="col-md-6">
+                        <div class="beneficio-box" style="background-color: #fff; color: #333; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+                            <i class="fas fa-flask" style="vertical-align: middle; margin-right: 8px;"></i>
+                            <strong>Método Basado en Evidencia</strong>
+                            <p style="text-align: justify;">Nos guiamos por la ciencia para asegurar que cada plan tenga el máximo impacto positivo en tu vida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bloque 4 -->
+                    <div class="col-md-6">
+                        <div class="beneficio-box" style="background-color: #fff; color: #333; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+                            <i class="fas fa-leaf" style="vertical-align: middle; margin-right: 8px;"></i>
+                            <strong>Transformación Duradera</strong>
+                            <p style="text-align: justify;">No solo buscamos cambios temporales, sino mejorar tu bienestar a largo plazo con un enfoque holístico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Imagen relacionada -->
+            <div class="col-lg-6 image-container" style="padding-left: 0px; padding-right: 0px;">
+                <img src="assets/images/services/img_consulta.jpg" alt="Beneficios para tu Empresa" class="img-fluid" style="width: 90%; height: auto; border-radius: 10px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Aplicar margen izquierdo solo en pantallas de laptop y superiores */
+    @media (min-width: 992px) {
+        .image-container img {
+            margin-left: 30px;
+            max-height: 97%;
+        }
+    }
+
+    /* Centrar la imagen en pantallas pequeñas (celulares) */
+    @media (max-width: 767px) {
+        .image-container img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            max-height: 100%;
+        }
+    }
+</style>
+
+
+
+
+
+
+            <div class="bg-pattern bg-light repeat-img" style="background-image: url(assets/images/blog-pattern-bg.png);">
+                <section class="blog-sec section section-to-animate section-from-right" id="blog">
+                    <div class="sec-wp">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="sec-title text-center mb-5">
+                                        <h2 class="h2" style="font-weight: bold;font-size: 38px;">Servicios que ofrecemos</h2>
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Fila de servicios con 4 columnas -->
+                            <div class="row justify-content-center">
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="blog-box" style="text-align: center; font-family: 'Montserrat', sans-serif;">
+                                        <div class="blog-img back-img" style="background-image: url(assets/images/blog/img1.png);"></div>
+                                        <div class="blog-text" style="text-align: center;">
+                                            <a href="#" class="h4-title" style="text-align: center;font-family: 'Montserrat', sans-serif;">Consultas nutricionales</a>
+                                            <p style="font-family: 'Montserrat', sans-serif; margin-bottom: 47px;margin-left: 0px;">Planes personalizados para tus objetivos: mejora tu rendimiento deportivo, trata enfermedades, cuida tu alimentación en la gestación, la de tus hijos o alcanza metas estéticas.</p>
+                                            <a href="servicios.html#consultoria-nutricional" class="sec-btn" style="font-size: 13px;">MÁS INFORMACIÓN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="blog-box" style="text-align: center;">
+                                        <div class="blog-img back-img" style="background-image: url(assets/images/blog/img2.png);"></div>
+                                        <div class="blog-text" style="text-align: center;">
+                                            <a href="#" class="h4-title" style="text-align: center;font-family: 'Montserrat', sans-serif;">Psicología y bienestar emocional</a>
+                                            <p style="font-family: 'Montserrat', sans-serif; margin-bottom: 25px;margin-left: 0px;">Apoyo emocional y mental mediante terapias individuales o grupales, con programas para mejorar tu bienestar y manejar el estrés, con especialistas en la materia</p>
+                                            <a href="servicios.html#consultoria-psicologia" class="sec-btn" style="font-size: 13px;">MÁS INFORMACIÓN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="blog-box" style="text-align: center;">
+                                        <div class="blog-img back-img" style="background-image: url(assets/images/blog/img3.png);"></div>
+                                        <div class="blog-text" style="text-align: center;">
+                                            <a href="#" class="h4-title" style="text-align: center;font-family: 'Montserrat', sans-serif;">Programa de entrenamiento personalizado</a>
+                                            <p style="font-family: 'Montserrat', sans-serif;margin-bottom: 57px;margin-left: 0px;">Programas físicos que complementan tu plan nutricional, adaptados a tu nivel y objetivos, desde la pérdida de peso hasta la ganancia muscular</p>
+                                            <a href="servicios.html#consultoria-Entrenamiento" class="sec-btn" style="font-size: 13px;">MÁS INFORMACIÓN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 mb-4">
+                                    <div class="blog-box" style="text-align: center;">
+                                        <div class="blog-img back-img" style="background-image: url(assets/images/blog/img4.png);"></div>
+                                        <div class="blog-text" style="text-align: center;">
+                                            <a href="#" class="h4-title" style="text-align: center;font-family: 'Montserrat', sans-serif;">Programas corporativos de bienestar</a>
+                                            <p style="font-family: 'Montserrat', sans-serif;margin-bottom: 25px;">Soluciones integrales para empresas, enfocadas en mejorar la salud y productividad de los empleados mediante talleres, consultorías y programas específicos</p>
+                                            <a href="servicios.html#consultoria-coorporativo" class="sec-btn" style="font-size: 13px;">MÁS INFORMACIÓN</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            
+        
+
+      
+            <section class="testimonials section bg-light section-to-animate section-from-left">
+                <div class="sec-wp">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="sec-title text-center mb-5">
+                                    <h2 class="h2-title" style="font-weight: bold;">Testimonios </h2>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <div class="testimonials-img">
+                                    <img src="assets/images/services/testimonios2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="testimonials-box">
+                                            <div class="testimonial-box-top">
+                                                <div class="testimonials-box-img back-img"
+                                                     style="background-image: url(assets/images/testimonials/t1.jpg);">
+                                                </div>
+                                                <div class="star-rating-wp">
+                                                    <div class="star-rating">
+                                                        <span class="star-rating__fill" style="width:100%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="testimonials-box-text">
+                                                <h3 class="h3-title">Mónica Caceda</h3>
+                                                <p>La doctora Brighitte es una excelente profesional. Gracias a ella, he podido conseguir mis metas de recomposición corporal y luego tomar la decisión de ingresar a la fase de volumen, con el fin de ganar músculo. Esto me ha permitido tener más fuerza para entrenar de una mejor manera en el Powerlifting, así como otras disciplinas deportivas. No solo adecua la comida de acuerdo con tu requerimiento, sino que toma en cuenta tu ritmo de vida y tus objetivos. Finalmente, no siento que estoy en una dieta, sino que como mejor.  Agradecerle por todo, y por lo que sigo aprendiendo del mundo de la nutrición deportiva.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonials-box">
+                                            <div class="testimonial-box-top">
+                                                <div class="testimonials-box-img back-img"
+                                                     style="background-image: url(assets/images/testimonials/t3.jpg);">
+                                                </div>
+                                                <div class="star-rating-wp">
+                                                    <div class="star-rating">
+                                                        <span class="star-rating__fill" style="width:100%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="testimonials-box-text">
+                                                <h3 class="h3-title">Liliana Herrán</h3>
+                                                    <p>Estoy muy feliz de poder estar logrando mis objetivos de perder peso , estuve por mucho tiempo tratando por diferentes medios de hacerlo y no lo podía lograr, y ahora por fin lo voy logrando con ayuda de  Brighitte  preparando una dieta personalizada según mis requerimientos y de poder consultar cualquier duda que tenga sobre mi alimentación en cualquier momento y siempre respondiendo con mucha amabilidad  y Franco  con su entrenamiento atención y dedicación y atento a mis necesidades en cuanto a ejercicios  y también pendiente de mi evolución gracias por su dedicación, estoy muy contenta con los resultados hasta ahora obtenidos y vamos por más. Gracias</p>
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonials-box">
+                                            <div class="testimonial-box-top">
+                                                <div class="testimonials-box-img back-img"
+                                                     style="background-image: url(assets/images/testimonials/t2.jpg);">
+                                                </div>
+                                                <div class="star-rating-wp">
+                                                    <div class="star-rating">
+                                                        <span class="star-rating__fill" style="width:100%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="testimonials-box-text">
+                                                <h3 class="h3-title">Douglas Vergaray</h3>
+                                                <p>Cuento casi a un año de contar con todo el apoyo profesional, haber elegido el servicio de nutrición ha sido mi mejor elección, pues los resultados que hasta ahora se han venido dando y que se siguen construyendo de la mano con la nutricionista, hablan por sí solos. Desde tu forma de atender las consultas hasta el seguimiento de tu parte ya hace que uno se sienta seguro y cómodo.
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="testimonials-box">
+                                            <div class="testimonial-box-top">
+                                                <div class="testimonials-box-img back-img"
+                                                     style="background-image: url(assets/images/testimonials/t4.jpg);">
+                                                </div>
+                                                <div class="star-rating-wp">
+                                                    <div class="star-rating">
+                                                        <span class="star-rating__fill" style="width:100%"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="testimonials-box-text">
+                                                <h3 class="h3-title">Rosa Castillo</h3>
+                                                <p>Gracias al nutricionista Juan Carlos, he logrado mejorar significativamente mi alimentación y controlar mi diabetes. Su enfoque personalizado y su dedicación para enseñarme a hacer elecciones saludables me han permitido no solo bajar mis niveles de glucosa, sino también sentirme con más energía y bienestar general. Cada consulta me brindaba herramientas prácticas y un plan de alimentación fácil de seguir, adaptado a mis necesidades. Sin duda, su orientación ha sido clave para mejorar mi calidad de vida y manejar mi condición de manera efectiva</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+   
+            <section class="newsletter-sec section pt-0">
+            </section>
+          <!-- footer starts  -->
+<footer class="site-footer" id="contact">
+    <div class="top-footer section" style="padding-top: 0px;padding-bottom: 0px;">
+        <div class="sec-wp" style="background-color:#96A57A ;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="footer-info">
+                            <div class="footer-logo">
+                                <a href="index.html">
+                                    <img src="logo.png" alt="">
+                                </a>
+                            </div>
+                            <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, tenetur.</p> -->
+                    <div class="social-icon">
+                        <ul>
+                            <li>
+                    
+                                <a href="https://wa.me/51908500961" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com/sientetefit" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.tiktok.com/@sintete.fit?_t=8pduIPmuxQk&_r=1"target="_blank">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+                            </li>
+                        </ul>
+</div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="footer-flex-box">
+                            <div class="footer-table-info">
+                                <h3 class="h3-title">Horarios</h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Lunes - Viernes:</strong> 8:00 AM - 8:00 PM</li>
+                                    <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Sábado:</strong> 8:00 AM - 6:00 PM</li>
+                                    <li><i class="uil uil-clock" style="margin-right: 8px;"></i><strong>Domingo:</strong> 9:00 AM - 2:00 PM</li>
+                                </ul>
+                                
+                            </div>
+                            <div class="footer-menu food-nav-menu">
+                                <h3 class="h3-title">Páginas</h3>
+                                <ul class="column-2">
+                                    <li>
+                                        <a href="#home" class="footer-active-menu">
+                                            <i class="uil uil-home"></i> Home
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="especialistas.html">
+                                            <i class="uil uil-user-md"></i> Especialistas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="servicios.html">
+                                            <i class="uil uil-user-md"></i> Servicios
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contacto.html">
+                                            <i class="uil uil-envelope"></i> Contacto
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-menu">
+                                <h3 class="h3-title">Información</h3>
+                                <ul>
+                                    <li><a href="terminos.html"><i class="uil uil-file-alt"></i> Términos</a></li>
+                                    <li><a href="https://maps.app.goo.gl/sPwTqMBsYKbBnfCe9" target="_blank"><i class="uil uil-map-marker"></i> Av. Brasil 2730, Pueblo Libre, Lima - Perú</a></li>
+                                    <!-- <li><a href="#"><i class="uil uil-cookie"></i> Cookie Policy</a></li> -->
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer ends -->
+
+
+
+
+        </div>
+    </div>
+
+    <a href="https://wa.me/51908500961" class="whatsapp-float" target="_blank">
+        <i class="uil uil-whatsapp"></i>
+    </a>
+    
+
+
+
+    <!-- jquery  -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+
+    <!-- fontawesome  -->
+    <script src="assets/js/font-awesome.min.js"></script>
+
+    <!-- swiper slider  -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- mixitup -- filter  -->
+    <script src="assets/js/jquery.mixitup.min.js"></script>
+
+    <!-- fancy box  -->
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+
+    <!-- parallax  -->
+    <script src="assets/js/parallax.min.js"></script>
+
+    <!-- gsap  -->
+    <script src="assets/js/gsap.min.js"></script>
+
+    <!-- scroll trigger  -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- scroll to plugin  -->
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <!-- rellax  -->
+    <!-- <script src="assets/js/rellax.min.js"></script> -->
+    <!-- <script src="assets/js/rellax-custom.js"></script> -->
+    <!-- smooth scroll  -->
+    <script src="assets/js/smooth-scroll.js"></script>
+    <!-- custom js  -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
