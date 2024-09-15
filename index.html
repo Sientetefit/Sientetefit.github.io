@@ -188,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <p class="service-description">Nuestra misión es mejorar tu bienestar integral mediante un enfoque multidisciplinario que combina nutrición, psicología y entrenamiento. Nos dedicamos a apoyarte en cada paso para que alcances tus objetivos, ya sea mejorar tu rendimiento, tratar enfermedades, alcanzar metas estéticas o cuidar tu salud mental.</p>
                             <p class="service-description">Ofrecemos soluciones personalizadas y basadas en evidencia científica tanto para personas que buscan transformar su vida como para empresas que desean mejorar la salud y productividad de sus empleados.</p>
                             <p class="service-description">Contáctanos hoy para comenzar tu transformación o impulsar el bienestar de tu equipo con nuestro apoyo integral.</p>
+                    
                         </div>
                     </div>
                 </div>
@@ -251,23 +252,56 @@ document.addEventListener('DOMContentLoaded', function() {
 </section>
 
 <style>
-    /* Aplicar margen izquierdo solo en pantallas de laptop y superiores */
-    @media (min-width: 992px) {
-        .image-container img {
-            margin-left: 30px;
-            max-height: 97%;
-        }
+  /* Para pantallas grandes (escritorio) */
+@media (min-width: 1200px) {
+    .image-container img {
+        margin-left: 30px;
+        max-height: 97%;
+    }
+}
+
+/* Para pantallas medianas (laptops y tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .beneficio-box {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    /* Centrar la imagen en pantallas pequeñas (celulares) */
-    @media (max-width: 767px) {
-        .image-container img {
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            max-height: 100%;
-        }
+    .col-md-6 {
+        flex-basis: 100%;
+        max-width: 100%;
     }
+
+    .image-container img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-height: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Para pantallas pequeñas (celulares) */
+@media (max-width: 767px) {
+    .beneficio-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .col-md-6 {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .image-container img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-height: 100%;
+        margin-top: 20px;
+    }
+}
+
 </style>
 
 
@@ -354,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="testimonials-img">
-                                    <img src="assets/images/services/testimonios2.png" alt="">
+                                    <img src="assets/images/services/testimonios.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-7">

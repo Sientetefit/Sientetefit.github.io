@@ -322,7 +322,7 @@ font-family: 'Poppins', sans-serif; */
     background-image: url('assets/images/naranja.png'); /* Ruta a tu imagen de la naranja */
     background-size: cover;
       margin-right: -202px;
-      margin-top: -200px;
+      margin-top: 93px;
     filter: blur(1px); /* Aplica el desenfoque */
     z-index: -1; /* Asegura que esté detrás del texto */
     opacity: 0.5; /* Ajusta la opacidad según tu preferencia */
@@ -1924,8 +1924,8 @@ p {
 
 .testimonials-img img {
     position: absolute;
-    top: 60px;
-    right: -55px;
+    top: -119px;
+    right: -18px;
     /* width: calc(100% + 5vw); */
     max-width: initial;
     width: 666px;
